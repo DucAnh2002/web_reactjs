@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Album from '../Album';
+import './styles.scss';
 
 AlbumList.propTypes = {
     albumList: PropTypes.array.isRequired,
@@ -14,8 +15,7 @@ function AlbumList({ albumList }) {
                     <Album album={album} />
                 </li>
             ))}
-
-        </ul> >
+        </ul>
     );
 }
 

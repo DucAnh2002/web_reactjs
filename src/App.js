@@ -1,8 +1,10 @@
 import React from 'react';
 //import logo from './logo.svg';
-import './App.css';
+//import './App.css';
 //import TodoFeature from './features/Todo/pages';
-import AlbumFeature from './features/Album/pages';
+//import AlbumFeature from './features/Album/pages';
+import ColorBox from './components/ColorBox';
+import Counter from './components/Counter';
 
 function App() {
 
@@ -10,7 +12,10 @@ function App() {
     <div className="App">
       {/* <TodoFeature /> */}
 
-      <AlbumFeature />
+      {/* <AlbumFeature /> */}
+      <ColorBox />
+      <Counter />
+
     </div>
   );
 }
