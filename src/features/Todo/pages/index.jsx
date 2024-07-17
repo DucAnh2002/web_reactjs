@@ -1,5 +1,4 @@
-import React from 'react';
-// import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import TodoList from '../components/TodoList/pages';
 
 TodoFeature.propTypes = {
@@ -7,24 +6,35 @@ TodoFeature.propTypes = {
 };
 
 function TodoFeature(props) {
-    const todoList = [
+    const inittodoList = [
         {
             id: 1,
-            title: 'eat'
+            title: 'eat',
+            status: 'new',
         },
         {
             id: 2,
-            title: 'sleep'
+            title: 'sleep',
+            status: 'completed',
+
         },
         {
             id: 3,
-            title: 'Code'
+            title: 'Code',
+            status: 'new',
         },
-    ]
+    ];
+
+    const [todoList, setTodoList] = useState(inittodoList);
+
+    const handleTodoClick = (todo, idx) => {
+
+        console.log(todo, idx);
+    }
     return (
         <div>
             <h3>Todo List</h3>
-            <TodoList todoList={todoList} />
+            <TodoList todoList={todoList} onTodoClick={handleTodoClick} />
         </div>
     );
 }

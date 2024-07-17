@@ -1,20 +1,17 @@
 import React from 'react';
-//import logo from './logo.svg';
-//import './App.css';
-//import TodoFeature from './features/Todo/pages';
-//import AlbumFeature from './features/Album/pages';
-import ColorBox from './components/ColorBox';
-import Counter from './components/Counter';
+import './App.css';
+import TodoFeature from './features/Todo/components/pages/index.jsx';
+
 
 function App() {
 
   return (
     <div className="App">
-      {/* <TodoFeature /> */}
+      <TodoFeature />
 
       {/* <AlbumFeature /> */}
-      <ColorBox />
-      <Counter />
+      {/* <ColorBox />
+      <Counter /> */}
 
     </div>
   );
